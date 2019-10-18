@@ -383,63 +383,44 @@ $bg_color = "#00bcd4";
          display: block;">Send data</a>
     
 
+
         <!-- Form Validaion -->
         <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" style="padding:20px;background-color:#ff9800;font-size:20px">
-                        <h2 class="text-center" style="color:#000">Form Validation</h2>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" name="user_name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" name="user_email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Website</label>
-                            <input type="text" name="user_website" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Comment</label>
-                            <textarea name="user_comment"   class="md-textarea form-control" rows="3"></textarea>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="gendar" value="Male" checked>Male</label>
-                        </div>
-                        <div class="radio">
-                          <label><input type="radio" name="gendar" value="Female">Female</label>
-                        </div>
-                        <div class="form-group">
-                        <input type="submit" name="user_submit" class="btn btn-danger btn-block" >
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
 
-            <!-- php -->
-            <?php
-
+        <?php
+            $error_name = $error_mail = $error_website = $error_gendar ="" ;   
             $name = $email = $website = $comment =  $gendar="";
-            $error_name = $error_mail = $error_website = $error_comment = $error_gendar ="" ;
-
-
 
             if(isset($_POST['user_submit'])){
-                $name     =  validate($_POST['user_name']);
-                $email    =  validate($_POST['user_email']);
-                $website  =  validate($_POST['user_website']);
+                if (empty($_POST['user_name'])) {
+                    $error_name = '<script>alert("You Have to Fulfil Name")</script>';
+                }else {
+                    $name     =  validate($_POST['user_name']);
+                }
+                if (empty($_POST['user_email'])) {
+                    $error_mail = '<script>alert("You Have to Fulfil  Email")</script>';
+                }else {
+                    $email    =  validate($_POST['user_email']);
+                } 
+                if (empty($_POST['user_website'])) {
+                    $error_website = '<script>alert("You Have to Fulfil Website Url")</script>';
+                }else {
+                    $website  =  validate($_POST['user_website']);
+                }
+                
                 $comment  =  validate($_POST['user_comment']);
-                $gendar   =  validate($_POST['gendar']);
+
+                if (empty($_POST['gendar'])) {
+                    $error_gendar = '<script>alert("You Have to Fulfil Gendar")</script>';
+                }else {
+                    $gendar   =  validate($_POST['gendar']);
+                }
                    
-            echo "Name : ".$name."<br>";
-            echo "Email : ".$email."<br>";
-            echo "Website : ".$website."<br>";
-            echo "Comment : ".$comment."<br>";
-            echo "Gendar : ".$gendar."<br>";
+            // echo "Name : ".$name."<br>";
+            // echo "Email : ".$email."<br>";
+            // echo "Website : ".$website."<br>";
+            // echo "Comment : ".$comment."<br>";
+            // echo "Gendar : ".$gendar."<br>";
             }
 
             function validate($data){
@@ -450,15 +431,47 @@ $bg_color = "#00bcd4";
             }
          
 
+        ?>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" style="padding:20px;background-color:#ff9800;font-size:20px">
+                        <h2 class="text-center" style="color:#000">Form Validation</h2>
+                        <div class="form-group">
+                            <label for="name">Name</label><?php echo $error_name ?>
+                            <input type="text" name="user_name" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label><?php echo $error_mail ?>
+                            <input type="text" name="user_email" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Website</label><?php echo $error_website ?>
+                            <input type="text" name="user_website" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Comment</label>
+                            <textarea name="user_comment"   class="md-textarea form-control" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                        <label for="gendar">Gendar</label><?php echo $error_gendar ?>
+                            <div class="radio">
+                                <label><input type="radio" name="gendar" value="Male" >Male</label>
+                            </div>
+                            <div class="radio">
+                            <label><input type="radio" name="gendar" value="Female">Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                        <input type="submit" name="user_submit" class="btn btn-danger btn-block" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-            ?>
-
-
-
-
-
-
-
+            <!-- php -->
+   
 
         </div>
 
