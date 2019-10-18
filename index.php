@@ -464,7 +464,7 @@ $bg_color = "#00bcd4";
 
         <!--Footer-->
         <div class="footerOption" style= "margin-top:40px;">
-            <h2><?php echo"www.shovon.net"; ?></h2>
+            <h2><?php echo"www.asmitjoy.shovon.net"; ?></h2>
         </div>
 
     </div>
