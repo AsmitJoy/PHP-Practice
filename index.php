@@ -1,65 +1,4 @@
-<?php
-$a = "I love Machine language";
-$b = " what about u?";
-$c = "i love php";
-$e = 50;
-$f= 50;
-$fonts ='Roboto Condensed';
-$color = "yellow";
-$bg_color = "#00bcd4";
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=d, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bootstrap.css">
-    <title>PHP Syntax</title>
-    <style>
-    *{
-        margin:0;
-        padding:0;
-    }
-    body{
-        font-family:<?php echo $fonts ?>
-    }
-    .phpcode{
-        width:900px;
-        margin:0 auto;
-        background:#000;
-        color:#fff;
-
-
-    }
-    .headerOption, .footerOption{
-        background:<?php echo $bg_color ?>;
-        color:<?php echo $color ?>;
-        text-align:center;
-        padding:20px;
-
-    }
-
-    .maincode{
-        min-height:400px;
-        padding:20px;
-
-    }
-
-
-
-
-    </style>
-</head>
-<body>
-    <div class="phpcode">
-
-            <!--Header-->
-        <div class="headerOption">
-        <?php echo "<h2>$c ".($e+$f)."%</h2>" ?>
-        </div>
-
+<?php include'header.php'?>
         <!--Main code-->
         <div class="maincode">
         <?php
@@ -327,7 +266,7 @@ $bg_color = "#00bcd4";
         <input type="submit" value="Submit">
         </form> -->
 
-        <!-- <?PHP
+         <?PHP
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $name = $_REQUEST['Username'];
             if(empty($name)){
@@ -336,7 +275,7 @@ $bg_color = "#00bcd4";
                 echo"<span style='color:green'>Submitted sucessfull</span> ".$name;
             }
         }
-        ?> -->
+        ?> 
 
         <!-- Shovon's Style -->
         <?php echo"Shovon's Style: "?>
@@ -392,18 +331,27 @@ $bg_color = "#00bcd4";
             $name = $email = $website = $comment =  $gendar="";
 
             if(isset($_POST['user_submit'])){
+
                 if (empty($_POST['user_name'])) {
                     $error_name = '<script>alert("You Have to Fulfil Name")</script>';
-                }else {
+                }   else {
                     $name     =  validate($_POST['user_name']);
                 }
+
                 if (empty($_POST['user_email'])) {
                     $error_mail = '<script>alert("You Have to Fulfil  Email")</script>';
+                }
+                elseif(!filter_var($_POST['user_email'],FILTER_VALIDATE_EMAIL)){
+                    $error_mail = '<script>alert("Invalid Email Format")</script>';//email validation
                 }else {
                     $email    =  validate($_POST['user_email']);
                 } 
+
                 if (empty($_POST['user_website'])) {
                     $error_website = '<script>alert("You Have to Fulfil Website Url")</script>';
+                }
+                elseif(!filter_var($_POST['user_website'],FILTER_VALIDATE_URL)){
+                    $error_mail = '<script>alert("Invalid Website Format")</script>';//website validation
                 }else {
                     $website  =  validate($_POST['user_website']);
                 }
@@ -414,6 +362,11 @@ $bg_color = "#00bcd4";
                     $error_gendar = '<script>alert("You Have to Fulfil Gendar")</script>';
                 }else {
                     $gendar   =  validate($_POST['gendar']);
+                }
+
+                //Show name, email, website and gendar if form is fulfil
+                if(!empty($name) && !empty($email) && !empty($website) && !empty($gendar)){
+                    echo '<script>alert("Name='.$name.'  Email= '.$email.'  Website='.$website.'  Gendar='.$gendar.' ")</script>';
                 }
                    
             // echo "Name : ".$name."<br>";
@@ -470,15 +423,30 @@ $bg_color = "#00bcd4";
             </div>
         </div>
 
-            <!-- php -->
+        <!--Php date and time-->
+
+            <?php
+            echo"<br>Date and time<br>";
+            echo "Today is: ".date("d/m/y")."<br>";
+            echo "Today is: ".date("D-M-Y")."<br>";
+            echo "Today is: ".date("l")."<br>";
+            echo "Default time  is: ".date("h:i:sa")."<br>";
+            date_default_timezone_set('Asia/Dhaka');
+            echo "Bangladesh Time  is: ".date("h:i:sa")."<br>";
+            echo date_default_timezone_get();
+
+
+
+            ?>
+
+        
+         <!-- php -->
    
 
         </div>
 
         <!--Footer-->
-        <div class="footerOption" style= "margin-top:40px;">
-            <h2><?php echo"www.asmitjoy.shovon.net"; ?></h2>
-        </div>
+        <?php require'footer.php'?>
 
     </div>
 </body>
