@@ -312,11 +312,8 @@
                 // else {
                 //     echo '<script>alert("you have to fulfil name and email")</script>';
                 // }
-            } 
-        
+            }     
         ?>
-
-
         <!-- SuperGllobals _GET: -->
         <a href = "get.php?msg=Hello!& text= I am joy"style="    margin: 38px 22px -18px 15px;
          display: block;">Send data</a>
@@ -434,18 +431,16 @@
             echo "Bangladesh Time  is: ".date("h:i:sa")."<br>";
             echo date_default_timezone_get();
 
-
-
+            ?>
+            <!--ReadFile-->
+            <?php
+                echo "<br>";
+                echo readfile("readfile.txt");
             ?>
 
-        
          <!-- php -->
    
         </div>
-        <?php
-        echo"ss";
-        ?>
-
         <!--Footer-->
         <?php require'footer.php'?>
 
