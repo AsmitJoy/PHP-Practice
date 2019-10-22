@@ -424,7 +424,6 @@
         </div>
 
         <!--Php date and time-->
-
             <?php
             echo"<br>Date and time<br>";
             echo "Today is: ".date("d/m/y")."<br>";
@@ -442,8 +441,10 @@
         
          <!-- php -->
    
-
         </div>
+        <?php
+        echo"ss";
+        ?>
 
         <!--Footer-->
         <?php require'footer.php'?>
