@@ -260,25 +260,25 @@
         echo "<br><br>";
         ?>
 
-        <!-- <form action="<?PHP echo $_SERVER["PHP_SELF"];?>" method="post">
+         <!-- <form action="<?PHP echo $_SERVER["PHP_SELF"];?>" method="post">
         <p>Username:</p>
         <input type="text" name="Username">
         <input type="submit" value="Submit">
-        </form> -->
+        </form>  -->
 
-         <?PHP
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $name = $_REQUEST['Username'];
-            if(empty($name)){
-                echo"<span style='color:red'>You must field up Username</span>";
-            }else {
-                echo"<span style='color:green'>Submitted sucessfull</span> ".$name;
-            }
-        }
+        <?PHP
+        // if($_SERVER["REQUEST_METHOD"] == "POST"){
+        //     $name = $_REQUEST['Username'];
+        //     if(empty($name)){
+        //         echo"<span style='color:red'>You must field up Username</span>";
+        //     }else {
+        //         echo"<span style='color:green'>Submitted sucessfull</span> ".$name;
+        //     }
+        // }
         ?> 
 
         <!-- Shovon's Style -->
-        <?php echo"Shovon's Style: "?>
+        <?php echo"<br>Shovon's Style: "?>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -339,7 +339,7 @@
                     $error_mail = '<script>alert("You Have to Fulfil  Email")</script>';
                 }
                 elseif(!filter_var($_POST['user_email'],FILTER_VALIDATE_EMAIL)){
-                    $error_mail = '<script>alert("Invalid Email Format")</script>';//email validation
+                    $error_mail = '<script>alert("Invalid Email Format")</script>';//email validation //We can simply use 'type = email' in form for this
                 }else {
                     $email    =  validate($_POST['user_email']);
                 } 
@@ -348,7 +348,7 @@
                     $error_website = '<script>alert("You Have to Fulfil Website Url")</script>';
                 }
                 elseif(!filter_var($_POST['user_website'],FILTER_VALIDATE_URL)){
-                    $error_mail = '<script>alert("Invalid Website Format")</script>';//website validation
+                    $error_mail = '<script>alert("Invalid Website Format")</script>';//website validation //We can simply use 'type = url' in form for this
                 }else {
                     $website  =  validate($_POST['user_website']);
                 }
@@ -435,7 +435,15 @@
             <!--ReadFile-->
             <?php
                 echo "<br>";
-                echo readfile("readfile.txt");
+                $ourfile = fopen("readfile.txt","r") or die("File not found");
+                //echo fread($ourfile,filesize("readfile.txt"));//show all text
+                //echo fgets($ourfile,filesize("readfile.txt"));//show first line
+                //echo"<br>";
+                //echo fgetc($ourfile);//show firt character
+                while(!feof($ourfile)){
+                    echo fgets($ourfile)."<br>";
+                }
+                fclose($ourfile);
             ?>
 
          <!-- php -->

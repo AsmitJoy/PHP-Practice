@@ -1,1 +1,5 @@
-Hi! i am asmit das joy from Bangladesh
+01.Hi! i am asmit das joy from Bangladesh.
+02.Now i am learning Php.
+03.Php is a interesting programming language.
+04.But Python is more easier than PHP.
+05.In future i want to be a great programmer. 
