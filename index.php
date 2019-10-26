@@ -432,7 +432,9 @@
             echo date_default_timezone_get();
 
             ?>
-            <!--ReadFile-->
+
+
+         <!--ReadFile-->
             <?php
                 echo "<br>";
                 $ourfile = fopen("readfile.txt","r") or die("File not found");
@@ -445,6 +447,31 @@
                 }
                 fclose($ourfile);
             ?>
+
+        <!--PHP Image Upload-->
+        <br>
+        <hr><p>PHP Image Upload</p><hr>
+        <?php
+            if (isset( $_FILES['image'])) {
+                $filename = $_FILES['image']['name'];
+                $filetmp  = $_FILES['image']['tmp_name'];
+                move_uploaded_file($filetmp,"images/".$filename);
+                echo"Image Uploaded sucessfully";
+            }
+        
+        ?>
+        
+        <Form method = "POST" action="" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" name="image" class="form-control" >
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submits" class="btn btn-danger" >
+            </div>
+        </Form>
+        
+
+
 
          <!-- php -->
    
