@@ -2,6 +2,7 @@
         <!--Main code-->
         <div class="maincode">
         <?php
+        session_start();
         echo $a.$b;
         echo "a "."b";
         print"<br>"; 
@@ -16,7 +17,6 @@
         echo "<br>";
         echo $name[1];
         echo "<br>";
-
 
           
         //Object
@@ -471,6 +471,19 @@
         </Form>
         
 
+        <!--PHP Sessions-->
+
+        <hr><p>PHP Sessions</p><hr>
+        <?php
+
+            $_SESSION['user'] = "Asmit";
+            $_SESSION['password'] = "123";
+            
+            echo"usrname is ".$_SESSION['user'] = "Asmit"."<br>";
+            echo"password is ".$_SESSION['password'] = "123";
+            session_destroy();//session start in top of the whole code
+        
+        ?>
 
 
          <!-- php -->
