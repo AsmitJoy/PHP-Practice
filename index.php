@@ -449,17 +449,17 @@
             ?>
 
         <!--PHP Image Upload-->
-        <br>
-        <hr><p>PHP Image Upload</p><hr>
-        <?php
-            if (isset( $_FILES['image'])) {
-                $filename = $_FILES['image']['name'];
-                $filetmp  = $_FILES['image']['tmp_name'];
-                move_uploaded_file($filetmp,"images/".$filename);
-                echo"Image Uploaded sucessfully";
-            }
-        
-        ?>
+            <br>
+            <hr><p>PHP Image Upload</p><hr>
+            <?php
+                if (isset( $_FILES['image'])) {
+                    $filename = $_FILES['image']['name'];
+                    $filetmp  = $_FILES['image']['tmp_name'];
+                    move_uploaded_file($filetmp,"images/".$filename);
+                    echo"Image Uploaded sucessfully";
+                }
+            
+            ?>
         
         <Form method = "POST" action="" enctype="multipart/form-data">
             <div class="form-group">
@@ -485,6 +485,20 @@
         
         ?>
 
+
+
+        <!--PHP Cookie-->
+        <?PHP
+        echo"<br>";
+        setcookie("visited","1",time()+86400,"/") or die("Could not set cookie");
+                echo "This is your first visit in this website.";
+            if (!isset($_COOKIE['visited'])) {
+                
+            } else {
+                echo"You are our old visitor";
+            }
+
+        ?>
 
          <!-- php -->
    
