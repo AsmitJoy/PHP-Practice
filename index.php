@@ -85,8 +85,8 @@
                 echo "$a[$i]<br>";
             }
 
-
             echo"<br>";
+                
             $x1 = array(
                 'a' => "Dhaka",
                 "b" => "Khulna"
@@ -500,7 +500,7 @@
             ?>
    
         <!--Php Filters-->
-            <hr><p>PHP Cookie</p><hr>
+         <hr><p>PHP Filter</p><hr>
             <!--php filter names and id-->
              <table>
                 <tr>
@@ -562,7 +562,7 @@
 
                 }
              ?>
-              <!--FILTER_VALIDATE_URL--> 
+            <!--FILTER_VALIDATE_URL--> 
               <?php
                 echo"<br><br>";
                 $url = "github.com/AsmitJoy";
@@ -573,11 +573,33 @@
                 echo $url." is not Website address";
 
                 }
-             ?>
+              ?>
+            <!--Filter Advanced-->
+              <!--Int_filter-->
+                <?php
+                    echo"<br><br>";
+                    $intnum = 2120;
+                    $min = 1;
+                    $max = 500;
+                    if(filter_var($intnum,FILTER_VALIDATE_INT,array("options" => array("min_range" =>$min,"max_raxnge" =>$max)))){
+                        echo"It is valid";
+                    }else {
+                        echo"It is not valid";
+                    }
+                ?> 
+              <!--url_filter-->
+                <?php
+                        echo"<br><br>";
+                        $url = "https://www.asmitjoy.shovon.net/";//index.html?=123?
+                        if(filter_var($url,FILTER_VALIDATE_URL, FILTER_FLAG_QUERY_REQUIRED)){
+                            echo"This url is valid";
+                        }else {
+                            echo"It is not query String";
+                        }
+                    ?> 
        
        
-       
-        <!--Filter section is closed-->
+            <!--Filter section is closed-->
 
          </div><!--Maincode-->
          
