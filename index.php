@@ -602,6 +602,8 @@
             <!--Filter section is closed-->
 
         <!--Error Handling-->
+            <hr><p>Error Handling</p><hr>
+
             <?php
                 //phpinfo();
                 error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE );
@@ -625,6 +627,8 @@
             ?>
            
         <!--String to Array and Array to string(Explode and Implode)-->
+        <hr><p>String to Array $ Array to String(Explode,Implode)</p><hr>
+
          <?php
             //String to Array
             echo"<br><br>";
@@ -638,7 +642,24 @@
             echo"<h3 style = color:green;>$my_string</h3>"
          ?>
 
-
+        <!--Php case change-->
+            <hr><p> case change</p><hr>
+            <?php
+                if (isset($_POST['text'])) {
+                    global $txt;
+                    $txt = $_POST['text'];
+                    echo strtoupper($txt);//strtolower for lowercase
+                    echo "<br>".ucfirst($txt);//first char will upercase
+                    echo "<br>".ucwords($txt);//first char of all words will upercase                     
+                }
+            ?>
+            <form action="index.php" method = "post">
+                <div class="container" style="background:red;color:red;padding:20px">
+                    <input type="text" name="text" value="<?php global $txt;echo $txt;?>" class=" form-control">
+                    <input type="submit" value="Submit"style="margin-top:10px" class="btn btn-danger btn-block">    
+                </div>
+            </form>
+       
 
 
 
