@@ -601,7 +601,32 @@
        
             <!--Filter section is closed-->
 
-         </div><!--Maincode-->
+        <!--Error Handling-->
+            <?php
+                //phpinfo();
+                error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE );
+            ?>
+
+        <!--Error Handling with Exception-->
+            <?php
+                echo"<br><br>";
+                function num_check($num){
+                    if($num!=7){
+                        throw new Exception(" Number is not 5");
+                    }
+                    return true;
+                }
+                try{
+                   num_check(7);
+                   echo"You didn't know who is CR7.<br>0MG!!!!!!!!!";
+                }catch(Exception $e){
+                    echo "Error: ".$e->getMessage();
+                }
+            ?>
+           
+
+
+         </div><!--Maincode Close-->
          
         <!--Footer-->
         <?php require'footer.php'?>
