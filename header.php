@@ -26,7 +26,7 @@ $bg_color = "#00bcd4";
         font-family:<?php echo $fonts ?>
     }
     .phpcode{
-        width:900px;
+        width:1000px;
         margin:0 auto;
         background:#000;
         color:#fff;
