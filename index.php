@@ -624,10 +624,27 @@
                 }
             ?>
            
+        <!--String to Array and Array to string(Explode and Implode)-->
+         <?php
+            //String to Array
+            echo"<br><br>";
+            $my_str = "Hi Godzila love Ronaldo.";
+            $ary = explode(" ",$my_str);
+            echo "<h2 style = color:red >$ary[3]</h2>";
+
+            //Array to string
+            $my_array = array("Hi!, ","Godzila","love","CR7.");
+            $my_string = implode(" ",$my_array);//we can seperate it by comma(,)
+            echo"<h3 style = color:green;>$my_string</h3>"
+         ?>
+
+
+
+
 
 
          </div><!--Maincode Close-->
-         
+            
         <!--Footer-->
         <?php require'footer.php'?>
 
