@@ -627,7 +627,7 @@
             ?>
            
         <!--String to Array and Array to string(Explode and Implode)-->
-        <hr><p>String to Array $ Array to String(Explode,Implode)</p><hr>
+         <hr><p>String to Array $ Array to String(Explode,Implode)</p><hr>
 
          <?php
             //String to Array
@@ -651,6 +651,8 @@
                     echo strtoupper($txt);//strtolower for lowercase
                     echo "<br>".ucfirst($txt);//first char will upercase
                     echo "<br>".ucwords($txt);//first char of all words will upercase                     
+                    echo "<br>".ltrim($txt,".");//Remove white space & "."
+
                 }
             ?>
             <form action="index.php" method = "post">
@@ -658,7 +660,17 @@
                     <input type="text" name="text" value="<?php global $txt;echo $txt;?>" class=" form-control">
                     <input type="submit" value="Submit"style="margin-top:10px" class="btn btn-danger btn-block">    
                 </div>
-            </form>
+            </form><!--Close-->
+
+            <!--require and require once-->
+                <hr><p>Require and require once</p><hr>
+                <?php
+                    require "new.php";
+                    //require "new.php";
+                    require_once "new.php";        
+                ?>
+
+
        
 
 
