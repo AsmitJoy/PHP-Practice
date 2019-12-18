@@ -671,12 +671,60 @@
                 ?>
 
 
-       
+        <!--Array Series-->
+        <hr><p>PHP ARRAY</p><hr>
+
+            <!--pratice-->
+                <?php
+                    $car = array("volvo","BMW","Toyota");
+                    $length = count($car);
+                    for ($i=0; $i < $length; $i++) { 
+                            echo $car[$i]."<br>";
+                    }
+                ?>
+            <!--associative array-->
+                <hr><h4>Associative array</h4><hr>
+                <?php
+                    $age = array(
+                        "joy"     => 17,
+                        "shovon"  => 28,
+                        "ronaldo" => 421,
+                        "anika"   => 112
+                    );
+                    foreach($age as $key => $value){
+                        echo "Name = " .$key." Age = ".$value."<br>";
+                    }
+                ?>
+            <!--multidimensional array-->
+            <hr><h4>Multidimensional array</h4><hr>
+                <?php
+                    $car = array(
+                        array("Volvo","100","10"),
+                        array("BMW","400","40"),
+                        array("toyota","500","50"),
+                        array("Lamborghini","900","90")
+                    );                    
+                    echo $car [3] [0]."<br>" ;
+                    echo $car [0] [2]."<br>"  ;
+                    echo $car [1] [0]."<br>"  ;
+                    echo $car [2] [1]."<br>"  ;
+
+
+                ?>
 
 
 
 
-         </div><!--Maincode Close-->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </div><!--Maincode Close-->
             
         <!--Footer-->
         <?php require'footer.php'?>
