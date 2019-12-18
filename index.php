@@ -656,7 +656,7 @@
                 }
             ?>
             <form action="index.php" method = "post">
-                <div class="container" style="background:red;color:red;padding:20px">
+                <div class="container" style="background:red;color:red;padding:20px;width: 962px;">
                     <input type="text" name="text" value="<?php global $txt;echo $txt;?>" class=" form-control">
                     <input type="submit" value="Submit"style="margin-top:10px" class="btn btn-danger btn-block">    
                 </div>
