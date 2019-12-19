@@ -694,7 +694,19 @@
                     foreach($age as $key => $value){
                         echo "Name = " .$key." Age = ".$value."<br>";
                     }
+                //Php array_change_key_case()
+                    $name = array(
+                        "Bengema" =>19,
+                        "Hazard"  =>22,
+                        "Ronaldo" =>16,
+                        "Huaguin" =>44
+                    );
+                    print("<pre>");
+                    print_r(array_change_key_case($name, CASE_UPPER));//google it for more
+                    print("</pre>");
+
                 ?>
+
             <!--multidimensional array-->
             <hr><h4>Multidimensional array</h4><hr>
                 <?php
