@@ -751,8 +751,19 @@
                     $last_name = array_column($name,'last_name','id');
                     print("<pre>");
                     print_r($last_name);
-                    echo"</pre>"
+                    echo"</pre>";
                 ?>
+          <!--array_combne[Function]-->
+           <hr><h4>Function - array_combine</h4><hr>
+                <?php
+                    $car_name = array("Ronaldo","Grizman","Lukaku");
+                    $department = array('Computer Science','Maths','Physics');
+                    $combine = array_combine($car_name,$department);
+                    print("<pre>");
+                    print_r($combine);
+                    echo"</pre>";
+                ?>
+
 
 
 
