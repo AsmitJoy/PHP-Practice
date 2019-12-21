@@ -764,8 +764,19 @@
                     echo"</pre>";
                 ?>
 
+          <!--array_count_values-->
+           <hr><h4>array_count_values</h4><hr>
+            <?php
+                $name    = array("Ronaldo","Grizman","Lukaku","Ronaldo","Ronaldo","Ronaldo","Lukaku","Lukaku","Lukaku","Lukaku","Lukaku","Lukaku","Lukaku");
+                $age     = array('12','34','44','44','44','44','44','7','7','7','12','7','44','7');
+                $value   = array_count_values($name);
+                $value1  = array_count_values($age);
+                print("<pre>");
+                print_r($value);
+                print_r($value1);
 
-
+                echo"</pre>";
+            ?>
 
 
 
