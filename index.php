@@ -708,7 +708,7 @@
                 ?>
 
             <!--multidimensional array-->
-            <hr><h4>Multidimensional array</h4><hr>
+             <hr><h4>Multidimensional array</h4><hr>
                 <?php
                     $car = array(
                         array("Volvo","100","10"),
@@ -720,9 +720,41 @@
                     echo $car [0] [2]."<br>"  ;
                     echo $car [1] [0]."<br>"  ;
                     echo $car [2] [1]."<br>"  ;
-
-
                 ?>
+          <!--array_column-->
+           <hr><h4>array_column</h4><hr>
+                <?php
+                    $name = array(
+                        array(
+                            'id'          => 200,
+                            'first_name'  => 'Asmit',
+                            'last_name'   => 'Joy'
+
+                        ),
+                        array(
+                            'id'          => 201,
+                            'first_name'  => 'Shovon',
+                            'last_name'   => 'Das'
+
+                        ),
+                        array(
+                            'id'          => 202,
+                            'first_name'  => 'CR',
+                            'last_name'   => '7'
+
+                        )
+                    );
+                    $last_name = array_column($name,'last_name','first_name');
+                    print("<pre>");
+                    print_r($last_name);
+                    echo"</pre>";
+                    $last_name = array_column($name,'last_name','id');
+                    print("<pre>");
+                    print_r($last_name);
+                    echo"</pre>"
+                ?>
+
+
 
 
 
