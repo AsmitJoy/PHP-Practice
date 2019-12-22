@@ -832,7 +832,7 @@
                     "k" =>"messi"
                 );
                 $array_five = array(
-                    "a" =>"Red",
+                    "a" =>"White",
                     "m" =>"Green",
                     "n" =>"Yellow"
                 );
@@ -848,7 +848,36 @@
                 print_r($differ_2);
                 echo"</pre>";
             ?>
-        
+        <!--Function - array_diff_key-->
+         <hr><h4>array_diff_key</h4><hr> 
+            <?php
+                $array_three = array(
+                    "a" =>"Red",
+                    "b" =>"Green",
+                    "c" =>"Yellow",
+                    "d" =>"Blue",
+                    "e" =>"Ronaldo"
+                );
+                $array_four = array(
+                    "h" =>"Red",
+                    "i" =>"Green",
+                    "b" =>"Blue",
+                    "k" =>"messi"
+                );
+                $array_five = array(
+                    "l" =>"Whte",
+                    "m" =>"Green",
+                    "c" =>"Yellow"
+                );
+
+                $differ_key = array_diff_key($array_three,$array_four,$array_five);//first array will compare with others              
+                print("<pre>");
+
+                echo"array_diff <br>";
+                print_r($differ_key);
+                echo"</pre>";
+
+            ?>       
                        
 
 
