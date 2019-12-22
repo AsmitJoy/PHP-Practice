@@ -756,9 +756,9 @@
           <!--array_combne[Function]-->
            <hr><h4>Function - array_combine</h4><hr>
                 <?php
-                    $car_name = array("Ronaldo","Grizman","Lukaku");
+                    $car_name   = array("Ronaldo","Grizman","Lukaku");
                     $department = array('Computer Science','Maths','Physics');
-                    $combine = array_combine($car_name,$department);
+                    $combine    = array_combine($car_name,$department);
                     print("<pre>");
                     print_r($combine);
                     echo"</pre>";
@@ -774,10 +774,47 @@
                 print("<pre>");
                 print_r($value);
                 print_r($value1);
-
                 echo"</pre>";
             ?>
+        <!--Function - array_diff-->
+         <hr><h4>array_diff</h4><hr>
+            <?php
+                $array_one = array("2","3",);
+                $array_two = array("1","3","5");
+                $differ    = array_diff($array_two,$array_one);
+                print("<pre>");
+                print_r($differ);
+                echo"</pre>";
 
+
+                $array_three = array(
+                    "a" =>"Red",
+                    "b" =>"Green",
+                    "c" =>"Yellow",
+                    "d" =>"Blue",
+                    "e" =>"Ronaldo"
+                );
+                $array_four = array(
+                    "a" =>"Red",
+                    "b" =>"Green",
+                    "d" =>"Blue",
+                    "e" =>"messi"
+                );
+                $array_five = array(
+                    "a" =>"Red",
+                    "b" =>"Green",
+                    "c" =>"Yellow"
+                );
+
+                $differ = array_diff($array_three,$array_four,$array_five);//first array will compare with others
+
+                print("<pre>");
+                print_r($differ);
+                echo"</pre>";
+
+            ?>
+        
+                       
 
 
 
