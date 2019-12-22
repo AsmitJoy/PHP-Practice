@@ -779,6 +779,8 @@
         <!--Function - array_diff-->
          <hr><h4>array_diff</h4><hr>
             <?php
+
+                    //It will compare only Value
                 $array_one = array("2","3",);
                 $array_two = array("1","3","5");
                 $differ    = array_diff($array_two,$array_one);
@@ -811,7 +813,40 @@
                 print("<pre>");
                 print_r($differ);
                 echo"</pre>";
+                ?>
+        <!--Function - array_diff_assoc-->
+         <hr><h4>array_diff_assoc</h4><hr>
+            <?php
+                    //It will compare not only Value but also Key
+                $array_three = array(
+                    "a" =>"Red",
+                    "b" =>"Green",
+                    "c" =>"Yellow",
+                    "d" =>"Blue",
+                    "e" =>"Ronaldo"
+                );
+                $array_four = array(
+                    "h" =>"Red",
+                    "i" =>"Green",
+                    "j" =>"Blue",
+                    "k" =>"messi"
+                );
+                $array_five = array(
+                    "a" =>"Red",
+                    "m" =>"Green",
+                    "n" =>"Yellow"
+                );
 
+                $differ_1 = array_diff($array_three,$array_four,$array_five);//first array will compare with others
+                $differ_2 = array_diff_assoc($array_three,$array_four,$array_five);//first array will compare with others
+              
+                print("<pre>");
+                echo"array_diff <br>";
+                print_r($differ_1);
+
+                echo"array_diff_assoc <br>";
+                print_r($differ_2);
+                echo"</pre>";
             ?>
         
                        
