@@ -672,7 +672,7 @@
 
 
         <!--Array Series-->
-        <hr><p>PHP ARRAY</p><hr>
+         <hr><p>PHP ARRAY</p><hr>
 
             <!--pratice-->
                 <?php
@@ -721,8 +721,8 @@
                     echo $car [1] [0]."<br>"  ;
                     echo $car [2] [1]."<br>"  ;
                 ?>
-          <!--array_column-->
-           <hr><h4>array_column</h4><hr>
+            <!--array_column-->
+             <hr><h4>array_column</h4><hr>
                 <?php
                     $name = array(
                         array(
@@ -753,8 +753,8 @@
                     print_r($last_name);
                     echo"</pre>";
                 ?>
-          <!--array_combne[Function]-->
-           <hr><h4>Function - array_combine</h4><hr>
+            <!--array_combne[Function]-->
+             <hr><h4>Function - array_combine</h4><hr>
                 <?php
                     $car_name   = array("Ronaldo","Grizman","Lukaku");
                     $department = array('Computer Science','Maths','Physics');
@@ -764,121 +764,188 @@
                     echo"</pre>";
                 ?>
 
-          <!--array_count_values-->
-           <hr><h4>array_count_values</h4><hr>
-            <?php
-                $name    = array("Ronaldo","Grizman","Lukaku","Ronaldo","Ronaldo","Ronaldo","Lukaku","Lukaku","Lukaku","Lukaku","Lukaku","Lukaku","Lukaku");
-                $age     = array('12','34','44','44','44','44','44','7','7','7','12','7','44','7');
-                $value   = array_count_values($name);
-                $value1  = array_count_values($age);
-                print("<pre>");
-                print_r($value);
-                print_r($value1);
-                echo"</pre>";
-            ?>
-        <!--Function - array_diff-->
-         <hr><h4>array_diff</h4><hr>
-            <?php
+            <!--array_count_values-->
+             <hr><h4>array_count_values</h4><hr>
+             <?php
+                 $name    = array("Ronaldo","Grizman","Lukaku","Ronaldo","Ronaldo","Ronaldo","Lukaku","Lukaku","Lukaku","Lukaku","Lukaku","Lukaku","Lukaku");
+                 $age     = array('12','34','44','44','44','44','44','7','7','7','12','7','44','7');
+                 $value   = array_count_values($name);
+                 $value1  = array_count_values($age);
+                 print("<pre>");
+                 print_r($value);
+                 print_r($value1);
+                 echo"</pre>";
+             ?>
+            <!--Function - array_diff-->
+                <hr><h4>array_diff</h4><hr>
+                <?php
 
-                    //It will compare only Value
-                $array_one = array("2","3",);
-                $array_two = array("1","3","5");
-                $differ    = array_diff($array_two,$array_one);
-                print("<pre>");
-                print_r($differ);
-                echo"</pre>";
+                        //It will compare only Value
+                    $array_one = array("2","3",);
+                    $array_two = array("1","3","5");
+                    $differ    = array_diff($array_two,$array_one);
+                    print("<pre>");
+                    print_r($differ);
+                    echo"</pre>";
 
 
-                $array_three = array(
-                    "a" =>"Red",
-                    "b" =>"Green",
-                    "c" =>"Yellow",
-                    "d" =>"Blue",
-                    "e" =>"Ronaldo"
-                );
-                $array_four = array(
-                    "a" =>"Red",
-                    "b" =>"Green",
-                    "d" =>"Blue",
-                    "e" =>"messi"
-                );
-                $array_five = array(
-                    "a" =>"Red",
-                    "b" =>"Green",
-                    "c" =>"Yellow"
-                );
+                    $array_three = array(
+                        "a" =>"Red",
+                        "b" =>"Green",
+                        "c" =>"Yellow",
+                        "d" =>"Blue",
+                        "e" =>"Ronaldo"
+                    );
+                    $array_four = array(
+                        "a" =>"Red",
+                        "b" =>"Green",
+                        "d" =>"Blue",
+                        "e" =>"messi"
+                    );
+                    $array_five = array(
+                        "a" =>"Red",
+                        "b" =>"Green",
+                        "c" =>"Yellow"
+                    );
 
-                $differ = array_diff($array_three,$array_four,$array_five);//first array will compare with others
+                    $differ = array_diff($array_three,$array_four,$array_five);//first array will compare with others
 
-                print("<pre>");
-                print_r($differ);
-                echo"</pre>";
+                    print("<pre>");
+                    print_r($differ);
+                    echo"</pre>";
+                    ?>
+            <!--Function - array_diff_assoc-->
+                <hr><h4>array_diff_assoc</h4><hr>
+                <?php
+                        //It will compare not only Value but also Key
+                    $array_three = array(
+                        "a" =>"Red",
+                        "b" =>"Green",
+                        "c" =>"Yellow",
+                        "d" =>"Blue",
+                        "e" =>"Ronaldo"
+                    );
+                    $array_four = array(
+                        "h" =>"Red",
+                        "i" =>"Green",
+                        "j" =>"Blue",
+                        "k" =>"messi"
+                    );
+                    $array_five = array(
+                        "a" =>"White",
+                        "m" =>"Green",
+                        "n" =>"Yellow"
+                    );
+
+                    $differ_1 = array_diff($array_three,$array_four,$array_five);//first array will compare with others
+                    $differ_2 = array_diff_assoc($array_three,$array_four,$array_five);//first array will compare with others
+                    
+                    print("<pre>");
+                    echo"array_diff <br>";
+                    print_r($differ_1);
+
+                    echo"array_diff_assoc <br>";
+                    print_r($differ_2);
+                    echo"</pre>";
                 ?>
-        <!--Function - array_diff_assoc-->
-         <hr><h4>array_diff_assoc</h4><hr>
-            <?php
-                    //It will compare not only Value but also Key
-                $array_three = array(
-                    "a" =>"Red",
-                    "b" =>"Green",
-                    "c" =>"Yellow",
-                    "d" =>"Blue",
-                    "e" =>"Ronaldo"
-                );
-                $array_four = array(
-                    "h" =>"Red",
-                    "i" =>"Green",
-                    "j" =>"Blue",
-                    "k" =>"messi"
-                );
-                $array_five = array(
-                    "a" =>"White",
-                    "m" =>"Green",
-                    "n" =>"Yellow"
-                );
+            <!--Function - array_diff_key-->
+                <hr><h4>array_diff_key</h4><hr> 
+                <?php
+                         //It will compare  only  Key
+                    $array_three = array(
+                        "a" =>"Red",
+                        "b" =>"Green",
+                        "c" =>"Yellow",
+                        "d" =>"Blue",
+                        "e" =>"Ronaldo"
+                    );
+                    $array_four = array(
+                        "h" =>"Red",
+                        "i" =>"Green",
+                        "b" =>"Blue",
+                        "k" =>"messi"
+                    );
+                    $array_five = array(
+                        "l" =>"Whte",
+                        "m" =>"Green",
+                        "c" =>"Yellow"
+                    );
 
-                $differ_1 = array_diff($array_three,$array_four,$array_five);//first array will compare with others
-                $differ_2 = array_diff_assoc($array_three,$array_four,$array_five);//first array will compare with others
-              
-                print("<pre>");
-                echo"array_diff <br>";
-                print_r($differ_1);
+                    $differ_key = array_diff_key($array_three,$array_four,$array_five);//first array will compare with others              
+                    print("<pre>");
 
-                echo"array_diff_assoc <br>";
-                print_r($differ_2);
-                echo"</pre>";
-            ?>
-        <!--Function - array_diff_key-->
-         <hr><h4>array_diff_key</h4><hr> 
-            <?php
-                $array_three = array(
-                    "a" =>"Red",
-                    "b" =>"Green",
-                    "c" =>"Yellow",
-                    "d" =>"Blue",
-                    "e" =>"Ronaldo"
-                );
-                $array_four = array(
-                    "h" =>"Red",
-                    "i" =>"Green",
-                    "b" =>"Blue",
-                    "k" =>"messi"
-                );
-                $array_five = array(
-                    "l" =>"Whte",
-                    "m" =>"Green",
-                    "c" =>"Yellow"
-                );
+                    echo"array_diff <br>";
+                    print_r($differ_key);
+                    echo"</pre>";
 
-                $differ_key = array_diff_key($array_three,$array_four,$array_five);//first array will compare with others              
-                print("<pre>");
+                ?>       
+            
+            <!--Function - array_intersect-->
+                <hr><h4>array_diff_intersect  [Same Result]</h4><hr>           
+                    <?php
+                            //It will compare  only  value [Key is not fact]
 
-                echo"array_diff <br>";
-                print_r($differ_key);
-                echo"</pre>";
+                        $array_one = array(
+                            "a" =>"Red",
+                            "b" =>"Green",
+                            "c" =>"Yellow",
+                            "d" =>"Blue",
+                            "e" =>"Ronaldo"
+                        );
+                        $array_two = array(
+                            "a" =>"Black",
+                            "i" =>"Green",
+                            "d" =>"Blue",
+                            "k" =>"messi",
+                            "e" =>"Ronaldo"
 
-            ?>       
-                       
+                        );
+
+                        $result= array_intersect($array_one,$array_two);//first array will compare with others[Same Result]             
+                        
+                        print("<pre>");
+                        echo"array_intersect [Same Result] <br>";
+                        print_r($result);
+                        echo"</pre>";
+
+                    ?>
+            <!--Function - array_intersect_assoc-->
+                <hr><h4>array_diff_intersect_assoc  [Same Result]</h4><hr>           
+                    <?php
+                            //It will compare  only  value ut also key [Key is not fact]
+
+                        $array_one = array(
+                            "a" =>"Red",
+                            "b" =>"Green",
+                            "c" =>"Yellow",
+                            "d" =>"Blue",
+                            "e" =>"Ronaldo"
+                        );
+                        $array_two = array(
+                            "a" =>"red",
+                            "b" =>"Green",
+                            "c" =>"Blue",
+                            "d" =>"messi",
+                            "e" =>"Ronaldo"
+
+                        );
+                        $array_three = array(
+                            "a" =>"red",
+                            "b" =>"Green",
+                            "c" =>"Blue",
+                            "d" =>"messi",
+                            "e" =>"Ronaldo"
+
+                        );
+
+                        $result = array_intersect_assoc($array_one,$array_two,$array_three);//first array will compare with others[Same Result]             
+                        
+                        print("<pre>");
+                        echo"array_intersect_assoc [Same Result] <br>";
+                        print_r($result);
+                        echo"</pre>";
+
+                    ?>
 
 
 
