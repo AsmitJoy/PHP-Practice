@@ -881,7 +881,7 @@
                 ?>       
             
             <!--Function - array_intersect-->
-                <hr><h4>array_diff_intersect  [Same Result]</h4><hr>           
+                <hr><h4>array_intersect  [Same Result-value]</h4><hr>           
                     <?php
                             //It will compare  only  value [Key is not fact]
 
@@ -910,7 +910,7 @@
 
                     ?>
             <!--Function - array_intersect_assoc-->
-                <hr><h4>array_diff_intersect_assoc  [Same Result]</h4><hr>           
+                <hr><h4>array_intersect_assoc  [Same Result-value and key]</h4><hr>           
                     <?php
                             //It will compare  only  value ut also key [Key is not fact]
 
@@ -946,7 +946,31 @@
                         echo"</pre>";
 
                     ?>
+            <!--Function - array_intersect_assoc-->
+             <hr><h4>array_intersect_key  [Same Result-key]</h4><hr>           
+                <?php
+                        //It will compare  only   key [Key is not fact]
 
+                    $array_one = array(
+                        "a" =>"Red",
+                        "b" =>"Green",
+                        "c" =>"Yellow"
+                    );
+                    $array_two = array(
+                        "a" =>"red",
+                        "q" =>"Green",
+                        "c" =>"Blue"
+                    );
+                    
+
+                    $result = array_intersect_key($array_one,$array_two);//first array will compare with others[Same Result]             
+                    
+                    print("<pre>");
+                    echo"array_intersect_assoc [Same Result] <br>";
+                    print_r($result);
+                    echo"</pre>";
+
+                ?>
 
 
         
