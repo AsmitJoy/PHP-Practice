@@ -946,7 +946,7 @@
                         echo"</pre>";
 
                     ?>
-            <!--Function - array_intersect_assoc-->
+            <!--Function - array_intersect_key-->
              <hr><h4>array_intersect_key  [Same Result-key]</h4><hr>           
                 <?php
                         //It will compare  only   key [Key is not fact]
@@ -973,9 +973,31 @@
                 ?>
 
 
-        
-        
-        
+            <!--Function - array_key_exists-->
+             <hr><h4>array_key_exists</h4><hr> 
+                <?php
+                    $arr = array(
+                        "name" => "Joy",
+                        "age"  => "44"
+                    );
+                    if (array_key_exists(AGE,$arr)) {
+                        echo "Key already exists<br>";
+                    }
+                    else{
+                        echo "Key dosen't exists<br>";
+                    }
+
+
+                    $arr_1 = array("joy","shovon"); 
+
+                    if (array_key_exists(1,$arr_1)) {
+                        echo "Key already exists";
+                    }
+                    else{
+                        echo "Key dosen't exists";
+                    }
+                ?>
+            
         
         
         
