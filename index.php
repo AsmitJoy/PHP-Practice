@@ -946,6 +946,7 @@
                         echo"</pre>";
 
                     ?>
+<<<<<<< HEAD
             <!--Function - array_intersect_key-->
              <hr><h4>array_intersect_key  [Same Result-key]</h4><hr>           
                 <?php
@@ -962,6 +963,33 @@
                         "c" =>"Blue"
                     );
                     
+=======
+            <!--Function - array_intersect_assoc-->
+             <hr><h4>array_intersect_key  [Same Result-key]</h4><hr>           
+                <?php
+                        //It will compare  only   key [Key is not fact]
+
+                    $array_one = array(
+                        "a" =>"Red",
+                        "b" =>"Green",
+                        "c" =>"Yellow"
+                    );
+                    $array_two = array(
+                        "a" =>"red",
+                        "q" =>"Green",
+                        "c" =>"Blue"
+                    );
+                    
+
+                    $result = array_intersect_key($array_one,$array_two);//first array will compare with others[Same Result]             
+                    
+                    print("<pre>");
+                    echo"array_intersect_assoc [Same Result] <br>";
+                    print_r($result);
+                    echo"</pre>";
+
+                ?>
+>>>>>>> 20306d2813ff92622880878b6016e5afbac24542
 
                     $result = array_intersect_key($array_one,$array_two);//first array will compare with others[Same Result]             
                     
