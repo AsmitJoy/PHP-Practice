@@ -1005,15 +1005,29 @@
                         "Bmw"   => "x5",
                         "Toyta" => "Benzema"
                     ) ;
-                    $result   = array_keys($car, "x5");
-                    $result_2 = array_keys($car);
+                    $result   = array_keys($car, "x5");//echo key using parameter
+                    $result_2 = array_keys($car);//echo all keys
                     echo"<pre>";
                     print_r($result);
                     print_r($result_2);
                     echo"</pre>";
 
                 ?>
-        
+            <!--Function - array_map-->
+             <hr><h4>array_key_map</h4><hr> 
+             <?php
+                function myfunction($value){
+                    $result = $value+$value;
+                    return $result;
+                }
+                $arr = array(1,2,3,4,5);
+
+                $map = array_map("myfunction", $arr);
+                print("<pre>");
+                print_r($map);
+                print("</pre>");
+
+             ?>
         
         
         
