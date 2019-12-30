@@ -1071,7 +1071,23 @@
                 print_r($result);
                 print("</pre>");
              ?>
-        
+
+            <!--Function - array_multisort-->
+             <hr><h4>array_multisort</h4><hr> 
+                <?php
+                        $arr_one = array("Dog","Cat");
+                        $arr_two = array("Lion","Tiger");
+
+                        array_multisort($arr_one,SORT_DESC,$arr_two,SORT_ASC);//Ascending order [A-Z]
+
+                    print("<pre>");
+                    print_r($arr_one);
+                    print("</pre>");
+
+                    print("<pre>");
+                    print_r($arr_two);
+                    print("</pre>");
+                ?>
         
         
         </div><!--Maincode Close-->
