@@ -1027,9 +1027,50 @@
                 print_r($map);
                 print("</pre>");
 
+                //Another example
+                function myfunction_1($value){
+                    $v = strtoupper($value);
+                    return $v;
+                }
+                $arr = array(
+                    "Animal" => "Godzila_7",
+                    "Type"   => "mammal",
+                    "Age"    =>"messi"
+                );
+
+                $map = array_map("myfunction_1", $arr);
+                print("<pre>");
+                print_r($map);
+                print("</pre>");
+
              ?>
-        
-        
+            <!--Function - array_merge-->
+             <hr><h4>array_merge</h4><hr>         
+             <?php
+
+                $array_one = array("red","green");
+                $array_one = array("blue","yellow");
+                $result    = array_merge($array_one,$array_two);
+
+                print("<pre>");
+                print_r($result);
+                print("</pre>");
+
+                //Another example
+                $arr_one = array(
+                    "a" => "Red",
+                    "b" => "Green"
+                );
+                $arr_two = array(
+                    "c" => "Black",
+                    "b" => "White"//last key will echo
+                );
+                $result    = array_merge($arr_one,$arr_two);
+
+                print("<pre>");
+                print_r($result);
+                print("</pre>");
+             ?>
         
         
         
