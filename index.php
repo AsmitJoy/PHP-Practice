@@ -1102,7 +1102,30 @@
                     print_r($result_2);
                     print("</pre>");
                 ?>
+            <!--Function - array_pop-->
+               <hr><h4>array_pop</h4><hr>
+               <?php
+                   
+                   //DELETE LAST VALUE
+                   $arr = array("Marcelo","Son","Ronaldo","Messi");
+                   array_pop($arr);
+
+                   print("<pre>");
+                   print_r($arr);
+                   print("</pre>");
+
+                   //ADD VALUES. 
+                   $arr = array("Marcelo","Son","Ronaldo","Messi");
+                   array_push($arr,"Ozil","Pepe","Ramos");//Associative array will be same format
+
+                   print("<pre>");
+                   print_r($arr);
+                   print("</pre>");
+               ?>
         
+
+
+
         </div><!--Maincode Close-->
             
         <!--Footer-->
