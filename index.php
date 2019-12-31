@@ -1088,7 +1088,20 @@
                     print_r($arr_two);
                     print("</pre>");
                 ?>
-        
+            <!--Function - array_Pad-->
+                <hr><h4>array_pad</h4><hr> 
+                <?php
+
+                    $arr = array("Marcelo","Son","Messi");
+                    $result = array_pad($arr,6,"Ronaldo");
+                    $result_2 = array_pad($arr,-6,"Ronaldo");
+
+
+                    print("<pre>");
+                    print_r($result);
+                    print_r($result_2);
+                    print("</pre>");
+                ?>
         
         </div><!--Maincode Close-->
             
