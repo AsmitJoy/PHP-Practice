@@ -1103,10 +1103,10 @@
                     print("</pre>");
                 ?>
             <!--Function - array_pop-->
-               <hr><h4>array_pop</h4><hr>
+               <hr><h4>array_pop & array_push</h4><hr>
                <?php
                    
-                   //DELETE LAST VALUE
+                   //DELETE LAST VALUE [array_pop]
                    $arr = array("Marcelo","Son","Ronaldo","Messi");
                    array_pop($arr);
 
@@ -1114,7 +1114,7 @@
                    print_r($arr);
                    print("</pre>");
 
-                   //ADD VALUES. 
+                   //ADD VALUES. [array_push]
                    $arr = array("Marcelo","Son","Ronaldo","Messi");
                    array_push($arr,"Ozil","Pepe","Ramos");//Associative array will be same format
 
@@ -1129,6 +1129,26 @@
                     $arr = array(10,10,5);
                     $result = array_product($arr);
 
+                    print("<pre>");
+                    print_r($result);
+                    print("</pre>");
+                ?>
+            <!--Function - array_replace-->
+               <hr><h4>array_replace</h4><hr>
+                <?php
+                    $color_one = array("a"=>"Red", "Green");
+                    $color_two = array("a"=>"Black","b"=>"White");
+                    $result    = array_replace($color_one,$color_two);//Color_two is replace color_one 
+
+                    print("<pre>");
+                    print_r($result);
+                    print("</pre>");
+
+                    $color_one   = array("Red", "Green");
+                    $color_two   = array("Black","White");
+                    $color_three = array("Yellow","Skyblue");
+
+                    $result      = array_replace($color_one,$color_two,$color_three);//Color_two is replace color_one 
                     print("<pre>");
                     print_r($result);
                     print("</pre>");
