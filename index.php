@@ -1153,6 +1153,21 @@
                     print_r($result);
                     print("</pre>");
                 ?>
+            <!--Function - array_replace-->
+               <hr><h4>array_replace</h4><hr>
+                <?php
+                    $color_one = array("a"=>"Red", "Green","Black","White");
+
+                    $result    = array_reverse($color_one);//Associative array will be in same way
+
+                    print("<pre>");
+                    print_r($color_one);
+                    print("</pre>");
+
+                    print("<pre>");
+                    print_r($result);//Reverse
+                    print("</pre>");
+                ?>
         
 
 
