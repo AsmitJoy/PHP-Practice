@@ -1122,6 +1122,17 @@
                    print_r($arr);
                    print("</pre>");
                ?>
+
+            <!--Function - array_product-->
+               <hr><h4>array_poduct</h4><hr>
+                <?php
+                    $arr = array(10,10,5);
+                    $result = array_product($arr);
+
+                    print("<pre>");
+                    print_r($result);
+                    print("</pre>");
+                ?>
         
 
 
