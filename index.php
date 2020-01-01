@@ -1153,8 +1153,8 @@
                     print_r($result);
                     print("</pre>");
                 ?>
-            <!--Function - array_replace-->
-               <hr><h4>array_replace</h4><hr>
+            <!--Function - array_reverse-->
+               <hr><h4>array_reverse</h4><hr>
                 <?php
                     $color_one = array("a"=>"Red", "Green","Black","White");
 
@@ -1168,7 +1168,22 @@
                     print_r($result);//Reverse
                     print("</pre>");
                 ?>
-        
+            <!--Function - array_Search-->
+               <hr><h4>array_search</h4><hr>
+               <?php
+                    $color_one = array("a"=>"Red", "b"=>"Green","c"=>"Black","d"=>"White");
+                    if (isset($_POST['Text'])) {
+                        global $txt; 
+                        $txt = $_POST['Text'];
+                        $result = array_search($txt, $color_one);
+                        echo"You have searched by ->$txt and your key is->$result";
+                    }
+                ?>
+
+                <form action="index.php" method = "POST" >
+                    <input type="text" name = "Text" value="<?php global $txt; echo $txt; ?>" style = "color:red">
+                    <input type="submit" value="Submit" class="btn-danger">
+                </form>
 
 
 
