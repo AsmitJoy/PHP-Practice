@@ -1201,10 +1201,24 @@
                     print("</pre>");
                 ?>
             <!--Function - array_slice-->
-                <hr><h4>array_slice[Catch selected value]</h4><hr>
+                <hr><h4>array_slice [Catch selected value]</h4><hr>
                 <?php
                     $color_one = array("red","green","blue","Black","Skyblue");
                     $result = array_slice($color_one,1,3);
+                    print("<pre>");
+                    print_r($result);
+                    print("</pre>");
+                ?>
+            <!--Function - array_sum-->
+               <hr><h4>array_sum [sumation]</h4><hr>
+                <?php
+                    $arr = array(
+                        "a" =>40,
+                        "b" =>10,
+                        "c" =>50
+                    );
+                    $result = array_sum($arr);
+
                     print("<pre>");
                     print_r($result);
                     print("</pre>");
