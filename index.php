@@ -1178,15 +1178,43 @@
                         $result = array_search($txt, $color_one);
                         echo"You have searched by ->$txt and your key is->$result";
                     }
+                    
                 ?>
 
                 <form action="index.php" method = "POST" >
                     <input type="text" name = "Text" value="<?php global $txt; echo $txt; ?>" style = "color:red">
                     <input type="submit" value="Submit" class="btn-danger">
                 </form>
+                
+            <!--Function - array_shift-->
+                <hr><h4>array_shift[Remove first Value with key]</h4><hr>
+                <?php
+                    $color_one = array(
+                        "a" =>"red",
+                        "b" =>"green",
+                        "c" =>"blue",
+                        "d" =>"Black"
+                    );
+                    array_shift($color_one);
+                    print("<pre>");
+                    print_r($color_one);
+                    print("</pre>");
+                ?>
+
+                
 
 
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         </div><!--Maincode Close-->
             
         <!--Footer-->
