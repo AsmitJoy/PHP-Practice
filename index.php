@@ -1223,7 +1223,22 @@
                     print_r($result);
                     print("</pre>");
                 ?>
-
+                <!--Function - array_unique-->
+                 <hr><h4>array_unique [don't post same value two times]</h4><hr>
+                    <?php
+                       $arr = array(
+                            "a" =>"red",
+                            "b" =>"green",
+                            "c" =>"blue",
+                            "d" =>"skyblue",
+                            "e" =>"red",
+                            "f" =>"skyblue"
+                        );
+                        $result = array_unique($arr); 
+                        print("<pre>");
+                        print_r($result);
+                        print("</pre>");
+                    ?>
                 
 
 
