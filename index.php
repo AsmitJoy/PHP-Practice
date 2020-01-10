@@ -1223,7 +1223,7 @@
                     print_r($result);
                     print("</pre>");
                 ?>
-                <!--Function - array_unique-->
+            <!--Function - array_unique-->
                  <hr><h4>array_unique [don't post same value two times]</h4><hr>
                     <?php
                        $arr = array(
@@ -1239,46 +1239,64 @@
                         print_r($result);
                         print("</pre>");
                     ?>
-                <!--Function - array_unshift-->
-                    <hr><h4>array_unshift [Add new value]</h4><hr>
-                        <?php
-                            $color = array(
-                                "a" =>"red",
-                                "b" =>"green",
-                                "c" =>"skyblue"
-                            );
-                            print("<pre>");
-                            print_r($color);
-                            print("</pre>");
-
-                            array_unshift($color,"blue");
-
-                            print("<pre>");
-                            print_r($color);//After Unshift
-                            print("</pre>");
-                        ?>
-
-
-                <!--Function - array_values-->
-                    <hr><h4>array_values [print only values] </h4><hr>
-                        <?php
+            <!--Function - array_unshift-->
+                <hr><h4>array_unshift [Add new value]</h4><hr>
+                    <?php
                         $color = array(
-                            "a" =>"Annablle",
-                            "b" =>"Annabelle Creation",
-                            "c" =>"Annabelle Comes Home"
+                            "a" =>"red",
+                            "b" =>"green",
+                            "c" =>"skyblue"
                         );
-                        $result = array_values($color);
-                        
                         print("<pre>");
-                        print_r($result);
+                        print_r($color);
                         print("</pre>");
-                        ?>
 
-                <!--Function - array_values-->
-                    <hr><h4>array_values</h4><hr>
-                        <?php
-                        
-                        ?>                                
+                        array_unshift($color,"blue");
+
+                        print("<pre>");
+                        print_r($color);//After Unshift
+                        print("</pre>");
+                    ?>
+
+
+            <!--Function - array_values-->
+                <hr><h4>array_values [print only values] </h4><hr>
+                    <?php
+                    $color = array(
+                        "a" =>"Annablle",
+                        "b" =>"Annabelle Creation",
+                        "c" =>"Annabelle Comes Home"
+                    );
+                    $result = array_values($color);
+                    
+                    print("<pre>");
+                    print_r($result);
+                    print("</pre>");
+                    ?>
+
+            <!--Function - array_walk-->
+                <hr><h4>array_walk [print key and values using function]</h4><hr>
+                    <?php
+
+                    function myfunction_2($department,$name){
+
+                        echo "<span style ='font-size:20px'><i>$name</i></span> comes from <span style ='font-size:20px'><i>$department</i></span> department<br>";
+                    }
+                        $name = array(
+                            'Shovon' => "Biology", 
+                            'Anik'   => "Computer Engineer",
+                            "Lopa"   => "Scientist"
+                        );
+                        array_walk($name,"myfunction_2")
+                    ?>      
+
+
+
+            <!--Function - array_values-->
+                <hr><h4>array_values</h4><hr>
+                    <?php
+                    
+                    ?>                                  
 
 
 
