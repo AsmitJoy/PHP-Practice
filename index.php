@@ -1327,9 +1327,19 @@
                     ?>     
 
 
-<!--Function - array_values-->
-<hr><h4>array_values</h4><hr>
+            <!--Function - compact-->
+                <hr><h4>compact [print variable with var_name and value as assosiative array]</h4><hr>
                     <?php
+                    
+                        $name    = "Joy";
+                        $dep     = "BGS";
+                        $fv_code = "Java";
+                        $result  = compact('name','dep','fv_code');
+
+                        print("<pre>");
+                        print_r($result);
+                        print("</pre>");
+
                     
                     ?>                                  
 <!--Function - array_values-->
