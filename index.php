@@ -1240,7 +1240,7 @@
                         print("</pre>");
                     ?>
                 <!--Function - array_unshift-->
-                    <hr><h4>array_unshift</h4><hr>
+                    <hr><h4>array_unshift [Add new value]</h4><hr>
                         <?php
                             $color = array(
                                 "a" =>"red",
@@ -1259,12 +1259,26 @@
                         ?>
 
 
-                <!--Function - array_unshift-->
-                <hr><h4>array_unshift</h4><hr>
+                <!--Function - array_values-->
+                    <hr><h4>array_values [print only values] </h4><hr>
+                        <?php
+                        $color = array(
+                            "a" =>"Annablle",
+                            "b" =>"Annabelle Creation",
+                            "c" =>"Annabelle Comes Home"
+                        );
+                        $result = array_values($color);
+                        
+                        print("<pre>");
+                        print_r($result);
+                        print("</pre>");
+                        ?>
+
+                <!--Function - array_values-->
+                    <hr><h4>array_values</h4><hr>
                         <?php
                         
-                        ?>
-                                
+                        ?>                                
 
 
 
