@@ -1103,7 +1103,7 @@
                     print("</pre>");
                 ?>
             <!--Function - array_pop-->
-               <hr><h4>array_pop & array_push</h4><hr>
+               <hr><h4>array_pop[DELETE LAST VALUE] & array_push[ADD VALUES]</h4><hr>
                <?php
                    
                    //DELETE LAST VALUE [array_pop]
@@ -1262,16 +1262,16 @@
             <!--Function - array_values-->
                 <hr><h4>array_values [print only values] </h4><hr>
                     <?php
-                    $color = array(
-                        "a" =>"Annablle",
-                        "b" =>"Annabelle Creation",
-                        "c" =>"Annabelle Comes Home"
-                    );
-                    $result = array_values($color);
-                    
-                    print("<pre>");
-                    print_r($result);
-                    print("</pre>");
+                        $color = array(
+                            "a" =>"Annablle",
+                            "b" =>"Annabelle Creation",
+                            "c" =>"Annabelle Comes Home"
+                        );
+                        $result = array_values($color);
+                        
+                        print("<pre>");
+                        print_r($result);
+                        print("</pre>");
                     ?>
 
             <!--Function - array_walk-->
@@ -1292,8 +1292,48 @@
 
 
 
-            <!--Function - array_values-->
-                <hr><h4>array_values</h4><hr>
+            <!--Function - asort and arsort-->
+                <hr><h4>asort and arsort </h4><hr>
+                    <?php
+                    
+                    $age = array(
+                        'Shovon' => "53", 
+                        'Anik'   => "08",
+                        "Lopa"   => "77",
+                        "Joy"    => "35"
+
+                    );
+                    asort($age);//Ascending [use arsort for descending]
+                    echo"Ascending<br>";
+                    foreach($age as $name => $age){
+
+                        echo"Name: $name Age: $age<br>";
+                    }
+                    $age = array(
+                        'Shovon' => "53", 
+                        'Anik'   => "08",
+                        "Lopa"   => "77",
+                        "Joy"    => "35"
+
+                    );
+                    arsort($age);
+                    echo"<br>Descending<br>";
+                    foreach($age as $name => $age){
+
+                        echo"Name: $name Age: $age<br>";
+                    }
+
+
+                    ?>     
+
+
+<!--Function - array_values-->
+<hr><h4>array_values</h4><hr>
+                    <?php
+                    
+                    ?>                                  
+<!--Function - array_values-->
+<hr><h4>array_values</h4><hr>
                     <?php
                     
                     ?>                                  
