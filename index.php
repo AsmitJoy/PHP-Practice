@@ -1239,7 +1239,32 @@
                         print_r($result);
                         print("</pre>");
                     ?>
-                
+                <!--Function - array_unshift-->
+                    <hr><h4>array_unshift</h4><hr>
+                        <?php
+                            $color = array(
+                                "a" =>"red",
+                                "b" =>"green",
+                                "c" =>"skyblue"
+                            );
+                            print("<pre>");
+                            print_r($color);
+                            print("</pre>");
+
+                            array_unshift($color,"blue");
+
+                            print("<pre>");
+                            print_r($color);//After Unshift
+                            print("</pre>");
+                        ?>
+
+
+                <!--Function - array_unshift-->
+                <hr><h4>array_unshift</h4><hr>
+                        <?php
+                        
+                        ?>
+                                
 
 
 
