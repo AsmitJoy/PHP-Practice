@@ -16,7 +16,7 @@
             var_dump($name);
 
             echo "<br>";
-            echo $name[1];
+            echo $name[1];//
             echo "<br>";
 
           
