@@ -19,7 +19,6 @@
             echo $name[1];//
             echo "<br>";
 
-          
         //Object
             class student{
                 function department(){
