@@ -1341,6 +1341,27 @@
 
                     
                     ?>                                  
+            <!--Function - current-->
+                <hr><h4>current</h4><hr>
+                    <?php
+                        $name = array("Joy","Shovon","Kamal","jamal","Dhamal");
+                        
+                        print("<pre>");
+                        print_r($name);
+                        print("</pre>");
+
+                        echo "Current_Value: ".current($name)."<br>";
+                        echo "Next_Value: ".next($name)."<br>";
+
+                        echo "Current_Value: ".current($name)."<br>";
+                        echo "Previous_Value: ".prev($name)."<br>";
+
+
+                        echo "Last_Value: ".end($name);
+                        
+
+                    ?>   
+
             <!--Function - array_values-->
                 <hr><h4>array_values</h4><hr>
                     <?php
