@@ -1362,6 +1362,26 @@
 
                     ?>   
 
+            <!--Function -in_array-->
+                <hr><h4>in_array</h4><hr>
+                    <?php
+                        $coder = array("Anik","Anika","Aniket","Animes","Ashin");
+                        if(isset($_POST['username'])){
+                            $text = $_POST['username'];
+                            if (in_array($text,$coder)) {
+                                echo "$text is a coder";
+                            }else{
+                                echo "$text is not a coder";
+                                                                
+                            }
+                        }
+                    ?>  
+
+                    <form action="#" method="post">
+                        <input type="text" name ="username"  style="color:#000;">
+                        <input class="btn-dengar" style = "color:red" type="submit" value="submit">
+                    </form>
+                     
             <!--Function - array_values-->
                 <hr><h4>array_values</h4><hr>
                     <?php
