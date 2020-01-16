@@ -33,7 +33,7 @@ $bg_color = "#00bcd4";
 
     }
     .headerOption, .footerOption{
-        background:<?php echo $bg_color ?>;
+        background:#09F6E9;
         color:<?php echo $color ?>;
         text-align:center;
         padding:20px;
@@ -57,7 +57,6 @@ $bg_color = "#00bcd4";
     </style>
 </head>
 <body>
-    <div class="phpcode">
 
             <!--Header-->
         <div class="headerOption">
