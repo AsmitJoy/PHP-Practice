@@ -1382,10 +1382,23 @@
                         <input class="btn-dengar" style = "color:red" type="submit" value="submit">
                     </form>
                      
-            <!--Function - array_values-->
-                <hr><h4>array_values</h4><hr>
+            <!--Function - key(), krsort(), ksort()-->
+                <hr><h4>Function - key(), krsort(), ksort()</h4><hr>
                     <?php
-                    
+                        $coder = array("Anik","Anika","Aniket","Animes","Ashin");
+                        echo"The current position is ".key($coder)."<br>";
+                        $coder = array(
+                            "Anik"  =>"33",
+                            "Honik" =>"44",
+                            "Dhonik"=>"17",
+                            "Tonik"=>"17"
+                        );
+                        krsort($coder);//Descending order [Use ksort for Ascending]
+                        foreach($coder as $key => $value){
+                            echo"Name:$key <br> Age: $value <br>";
+                        }
+
+
                     ?>                                  
             <!--Function - array_values-->
             <hr><h4>array_values</h4><hr>
