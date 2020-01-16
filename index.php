@@ -1,4 +1,5 @@
 <?php include'header.php'?>
+<div class="phpcode">
         <!--Main code-->
         <div class="maincode">
 
@@ -1421,10 +1422,12 @@
         
         </div><!--Maincode Close-->
             
-        <!--Footer-->
-        <?php require'footer.php'?>
 
     </div><!--Php code-->
+    
+     <!--Footer-->
+     <?php require'footer.php'?>
+
 </body>
 
 </html>
