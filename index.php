@@ -1400,10 +1400,21 @@
 
 
                     ?>                                  
-            <!--Function - array_values-->
-            <hr><h4>array_values</h4><hr>
+            <!--Function - shuffle-->
+                <hr><h4>shuffle</h4><hr>
                     <?php
-                    
+                        $color = array("Red","Green","Blue","Black","pink");
+
+                        print("Before shuffle<pre>");
+                        print_r($color);
+                        print("</pre>");
+
+                        shuffle($color);
+
+                        print("After shuffle<pre>");
+                        print_r($color);
+                        print("</pre>");
+
                     ?>  
 
         
