@@ -178,7 +178,6 @@
                 echo "<br>i am fool<br>";
 
             }
-
         //while
             echo "<br><br>while loop :<br><br>";
 
@@ -197,15 +196,12 @@
                 $y++;
             }while($y<=5);
 
-
         //for loop
             echo "<br><br>For loop :<br><br>";
 
             for($a = 0;$a <7; $a++){
                 echo"thi number is: $a<br>";
             }
-
-
         //foreach
             echo "<br><br> foreach : <br><br>";
             $friendnames = array("C#","PHP","C++","JAVA","DART");
