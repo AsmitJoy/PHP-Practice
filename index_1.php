@@ -11,7 +11,16 @@
     //Getting value from Radio Button 
     if (isset($_POST['gender'])) {
         $gen = $_POST['gender'];
-        echo "Gender is : ".$gen;
+        echo "Gender is : ".$gen."<br>";
+    }//End
+
+    //Getting value from Check Box
+    if (isset($_POST['coder'])) {
+        $code = $_POST['coder'];
+        echo "Favourite code is : ";
+        foreach ($code as $language => $value) {
+            echo $value.",";
+        }
     }//End
 
 
@@ -30,8 +39,15 @@
                 </div>
                 <div class="form-group">
                     <label style = "color:#fff" for="Gender">Gender</label>
-                    <input type="radio" name="gender" value = "Male"><span style = "color :green;">Male</span>
-                    <input type="radio" name="gender" value = "Female"><sapn style = "color :green;">Female</span>
+                    <input type="radio" name="gender" value = "Male"><span style = "color :green;"> Male </span>
+                    <input type="radio" name="gender" value = "Female"><sapn style = "color :green;"> Female </span>
+                </div>
+                <div class="form-group">
+                    <label style = "color:#fff" for="Gender">Coder</label>
+                    <input type="checkbox" name="coder[]" value = "PHP"><span style = "color :red;"> PHP </span>
+                    <input type="checkbox" name="coder[]" value = "JAVA"><sapn style = "color :red;"> JAVA </span>
+                    <input type="checkbox" name="coder[]" value = "C#"><sapn style = "color :red;"> C# </span>
+
                 </div>
                 <div class="form-group">
                     <input class = " btn btn-danger" type="submit" value="submit">
