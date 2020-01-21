@@ -34,7 +34,6 @@ $bg_color = "#00bcd4";
     }
     .headerOption, .footerOption{
         background:#09F6E9;
-        color:<?php echo $color ?>;
         text-align:center;
         padding:20px;
 
