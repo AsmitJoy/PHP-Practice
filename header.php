@@ -49,7 +49,12 @@ $bg_color = "#00bcd4";
         padding:0;
         font-size:20px;
     }
-
+    #my_form{width:100%;
+            height:auto;
+            border:1px solid #fff;
+            padding:10px;
+            font-size:20px;
+            }
 
 
 
