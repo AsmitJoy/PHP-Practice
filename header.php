@@ -55,6 +55,15 @@ $bg_color = "#00bcd4";
             padding:10px;
             font-size:20px;
             }
+    .table{
+        width:400px;
+        border:1px solid #fff;
+        margin: 20px 0;
+        padding:5px 10px;
+    }
+    .table tr:nth-child(2n+1){
+        background:#f1f1f1;
+    }
 
 
 
