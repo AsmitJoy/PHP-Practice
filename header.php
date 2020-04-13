@@ -5,7 +5,7 @@ $c = "i love php";
 $e = 50;
 $f= 50;
 $fonts ='Roboto Condensed';
-$color = "yellow";
+$color = "red";
 $bg_color = "#00bcd4";
 ?>
 <!DOCTYPE html>
