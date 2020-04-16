@@ -20,7 +20,7 @@
             echo $name[1];//
             echo "<br>";
 
-        //Object
+        //Objects
             class student{
                 function department(){
                     return "Bangla";
