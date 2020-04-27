@@ -5,6 +5,7 @@
 
             <?php
             session_start();
+
             echo $a.$b;
             echo "a "."b";
             print"<br>"; 
@@ -20,7 +21,7 @@
             echo $name[1];//
             echo "<br>";
 
-        //Objects
+        //Object
             class student{
                 function department(){
                     return "Bangla";
